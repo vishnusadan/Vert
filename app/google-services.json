@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "795194648548",
+    "firebase_url": "https://vert-bb89e.firebaseio.com",
+    "project_id": "vert-bb89e",
+    "storage_bucket": "vert-bb89e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795194648548:android:4f31c9b10cb595f8",
+        "android_client_info": {
+          "package_name": "com.vert.vert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795194648548-pstcmmv5ljlckhbql6m76mr565e2km9n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vert.vert",
+            "certificate_hash": "c41e8958747e78ab9578142b87830e10238fb1cf"
+          }
+        },
+        {
+          "client_id": "795194648548-7698dr32mdseksf5k2nkiphppvb1fdsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeziGEO8enRP2EoIPqbtdWtWe0xxPHKQw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795194648548-7698dr32mdseksf5k2nkiphppvb1fdsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

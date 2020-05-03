@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_ed"
+                android:elevation="@dimen/listelevation"
+                android:id="@+id/linear1"
+                android:orientation="horizontal">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Pretty hint text, and maxLines -->
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ed_from_tv"
+                        style="@style/CustomThemebk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        app:hintTextAppearance="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/ed_from"
+                            style="@style/CustomThemebk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/white"
+                            android:hint="@string/from"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@android:color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/textsize_ed" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <ListView
+                        android:id="@+id/listfrom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/listviewheight"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/listelevation" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/betweenview"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/listelevation"
+                    android:orientation="vertical">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/ed_to_tv"
+                        style="@style/CustomThemebk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        app:hintTextAppearance="@style/TextLabel">
+
+                        <EditText
+                            android:id="@+id/ed_to"
+                            style="@style/CustomThemebk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:drawablePadding="10dp"
+                            android:drawableTint="@color/white"
+                            android:hint="@string/to"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@android:color/white"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/textsize_ed" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!-- Set height to 0, and let the weight param expand it -->
+                    <!-- Note the use of the default ID! This lets us use a
+                 ListActivity still! -->
+                    <ListView
+                        android:id="@+id/listto"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/listviewheight"
+                        android:layout_weight="1"
+                        android:elevation="@dimen/listelevation" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/map"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/maptop"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                tools:context="com.vert.vert" />
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/oneway"
+            android:layout_width="@dimen/onewaywidth"
+            android:layout_height="wrap_content"
+            android:text="@string/oneway" />
+
+        <Button
+            android:id="@+id/roundtrip"
+            android:layout_width="@dimen/roundtripwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/roundtrip" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

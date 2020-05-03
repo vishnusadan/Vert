@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.vert.vert.activity.PaymentList">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ed_cardname"
+            style="@style/CustomThemebk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white">
+
+            <EditText
+                android:id="@+id/ed_username"
+                style="@style/CustomThemebk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:hint="@string/cardholdername"
+                android:inputType="text"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:textColor="@android:color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/textsize_ed" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ed_cardnumbertv"
+            style="@style/CustomThemebk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white">
+
+            <EditText
+                android:id="@+id/ed_cardnumber"
+                style="@style/CustomThemebk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:hint="@string/cardnumber"
+                android:inputType="number"
+                android:paddingBottom="10dp"
+                android:paddingLeft="3dp"
+                android:textColor="@android:color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/textsize_ed" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/paytym"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tv_cardmonth"
+                style="@style/CustomThemebk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/ed_cardmonth"
+                    style="@style/CustomThemebk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/white"
+                    android:maxLength="5"
+                    android:hint="@string/expmonth"
+                    android:inputType="number"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHighlight="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/textsize_ed" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ed_year"
+                style="@style/CustomThemebk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/ed_cardyear"
+                    style="@style/CustomThemebk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/white"
+                    android:hint="@string/expyear"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHighlight="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/textsize_ed" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ed_cvvtv"
+                style="@style/CustomThemebk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/ed_cvv"
+                    style="@style/CustomThemebk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/white"
+                    android:hint="@string/cvv"
+                    android:inputType="textPassword"
+                    android:maxLength="3"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="3dp"
+                    android:textColor="@android:color/white"
+                    android:textColorHighlight="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/textsize_ed" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/submit"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
